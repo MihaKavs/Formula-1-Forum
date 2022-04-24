@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Prijava v formulo</title>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="shortcut icon" href="slike/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="slike/favicon.ico" type="image/x-icon">
+		
+	</head>
+	<body>
+		<div class="blur">
+		<div class="naslov">
+			<h1>Prijavnica v formulo</h1>
+			
+		</div>
+		<form>
+		<div class="imepr">
+			<div class="ime">
+			<script src="myScript.js"></script>	
+				<label for="ime">Ime:</label><br/>
+				<input type="text" required placeholder="Charles" id="event" onkeydown="return alphaOnly(event);" name="ime">
+			</div>
+			<div class="priimek">
+				<label for="priimek">Priimek:</label><br/>
+				<input type="text" required id="event" onkeydown="return alphaOnly(event);" name="priimek" placeholder="Leclerc">
+			</div>
+		</div>
+		<div class="imepr">
+			<div class="ime">
+				<label for="datum">Datum rojstva:</label><br/>
+				<input id="datePickerId" type='date' min='1899-01-01' required pattern="\d{0,9}" value="2020-01-01"  max="2020-01-01">
+				
+			</div>
+		</div>
+		<div class="imepr">
+			<div class="ime">
+				<label for="tel">Telefonska Številka:</label><br/>
+				<input type="text" id="telefon" name="tel" pattern="\d{0,9}.{9,}" required placeholder="040 356 356"/>
+			</div>
+			<div class="priimek">
+				<label for="nasv">Hišni naslov:</label><br/>
+				<input type="text" required name="naslv" placeholder="Bovec 10"/>
+			</div>
+		</div>
+		<div class="imepr">
+			<div class="ime">
+				<label for="posta">Poštna Številka:</label><br/>	
+				<input type="text" required pattern="\d{0,9}.{4,}" placeholder="5000"/>
+			</div>
+			<div class="priimek">
+				<label for="mesto">Mesto:</label><br/>
+				<input type="text" required name="mesto" id="event" onkeydown="return alphaOnly(event);" placeholder="Ljubljana"/>
+			</div>
+		</div>
+		<div class="imepr">
+			<div class="ime">
+				<label for="razed">Tekmovalni razred:</label><br/>
+				<label class="radiobox">
+					<div class="opisSlike">
+					<input type="radio" name="razred" checked="checked"/></input>
+					<img src="slike/F1.png" alt="Formula1" class="shadow"   title="Formula 1"/>
+					</div>
+				</label>
+				<label class="radiobox">
+					<input type="radio" name="razred"/>
+					<img src="slike/F2.png" alt="Formula2" class="shadow" title="Formula 2"/>
+				</label>
+				<label class="radiobox">
+					<input type="radio" name="razred"/>
+					<img src="slike/F3.png" alt="Formula3" class="shadow" title="Formula 3"/>
+				</label>
+				<label class="radiobox">
+					<input type="radio" name="razred"/>
+					<img src="slike/FE.png" alt="FormulaE"  class="shadow" title="Formula E"/>
+				</label>
+				<label class="radiobox">
+					<input type="radio" name="razred"/>
+					<img src="slike/indycar.png" alt="Indycar"  class="shadow" title="Indycar"/>
+				</label>
+			</div>
+			<div class="priimek">
+				<label for="razed">Izkušenost:</label><br/>
+				<label class="tyres textColor">Začetnik<br/>
+					<input type="radio" name="izkusenost" checked="checked"/>
+					<img src="slike/soft.png" alt="Začetnik" class="shadow" title="Začetnik"/>
+				</label>
+				<label class="tyres textColor">Srednje izkušen<br/>
+					<input type="radio" name="izkusenost"/>
+					<img src="slike/medium.png" alt="Srednje izkušen" class="shadow" title="Srednje izkušen"/>
+					<img src="slike/medium.png" alt="Srednje izkušen" class="shadow" title="Srednje izkušen" />
+				</label>
+				<label class="tyres textColor">Napreden<br/>
+					<input type="radio" name="izkusenost"/>
+					<img src="slike/hard.png" alt="Napreden" class="shadow" title="Napreden"/>
+					<img src="slike/hard.png" alt="Napreden" class="shadow" title="Napreden"/>
+					<img src="slike/hard.png" alt="Napreden" class="shadow" title="Napreden"/>
+				</label>
+			</div>
+		</div>
+		<div class="konc">
+			<input type="submit" class="send" name="poslji" value="Pošlji">
+			
+		</div>
+		</form>
+		</div>
+	</body>
+
+
+</html>
